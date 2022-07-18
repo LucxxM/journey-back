@@ -43,10 +43,9 @@ export const connectDatabase = async () => {
     // console.log(users);
     // console.log('########################### user found ###########################');
 
-  
 
 }
 
-connectDatabase().catch(err => console.log(err));
+//connectDatabase().catch(err => console.log(err));
 // module.exports.Journey = mongoose.model('Journey', journeySchema);
 

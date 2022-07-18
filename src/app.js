@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config(  { path: '../.env' } );
 import { connectDatabase } from "../controllers/connectionDatabase.js";
 import express from "express";
 
