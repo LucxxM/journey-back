@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "BackEnd of Projet Journey",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node ./src/app.js",
     "devafpa": "nodemon -L ./src/app.js",
@@ -13,7 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
