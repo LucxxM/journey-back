@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config(  { path: '../.env' } );
-import { connectDatabase } from "../controllers/connectionDatabase.js";
+import { connectDatabase } from "./controllers/connectionDatabase.js";
+import { addUserTest } from "./controllers/addUserTestController.js";
 import express from "express";
 
 
@@ -15,6 +16,7 @@ app.use(express.json())
 const startApp = async () => {
 
   await connectDatabase();
+  await addUserTest();
 
   app.get('/', (req, res) => {
     res.send('"JE SUIS UNE PUTAIN DE GENIE! "Le mechant dans Golden Eye.')
