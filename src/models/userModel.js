@@ -9,4 +9,5 @@ const journeySchemaUser = new Schema({
 });
 
 export const JourneyUser = mongoose.model('JourneyUser', journeySchemaUser);
-//module.exports = JourneyUser;
+
+

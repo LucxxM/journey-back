@@ -15,8 +15,8 @@ export const addUserTest = async () => {
     await journeyUser.save();
     console.log('########################### user saved ###########################');
 
-    const users = JourneyUser.find();
-    //console.log(users);
-    console.log('########################### user found ###########################');
+    // const users = JourneyUser.find();
+    // console.log(users.firstname);
+    
 
 }
