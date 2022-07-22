@@ -1,22 +1,24 @@
-import express from "express";
-import { addUser, getUsers, getUserById, updateUser, deleteUser } from "./controllers/userControllers.js";
+const router = require("express").Router();
+const authController = require("../controllers/auth.controller");
+const userController = require("../controllers/user.controller");
+const uploadController = require('../controllers/upload.controller');
+const multer = require("multer");
+const upload = multer();
 
-const router = express.Router();
+// auth
+router.post("/register", authController.signUp);
+router.post("/login", authController.signIn);
+router.get("/logout", authController.logout);
 
-//get all users
-router.get("/", getUsers);
+// user DB
+router.get("/", userController.getAllUsers);
+router.get("/:id", userController.userInfo);
+router.put("/:id", userController.updateUser);
+router.delete("/:id", userController.deleteUser);
+router.patch("/follow/:id", userController.follow);
+router.patch("/unfollow/:id", userController.unfollow);
 
-//get user by id
-router.get("/:id", getUserById);
+// upload
+router.post("/upload", upload.single("file"), uploadController.uploadProfil);
 
-//add user
-router.post("/", addUser);
-
-//update user
-router.put("/:id", updateUser);
-
-//delete user
-router.delete("/:id", deleteUser);
-
-export default router;
-
+module.exports = router;
