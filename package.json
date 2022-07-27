@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node ./src/app.js",
-    "devafpa": "nodemon -L ./src/app.js",
+    "devafpa": "nodemon -L ./src/server.js",
     "dev": "nodemon ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
