@@ -10,8 +10,10 @@ const accommodationSchema = Schema(
         country: String,
         zipCode: String,
         description: String,
-        picture: String,
+        stars: Number,
 
     },
 
 );
+
+export const JourneyAccomodation = mongoose.model("JourneyAccommodation", accommodationSchema);

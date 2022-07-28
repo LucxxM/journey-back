@@ -15,20 +15,21 @@ export const connectDatabase = async () => {
   //   // socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
   // });
 
+
  
       
-  await connect('mongodb://root:root@localhost:27017/voyage?authSource=admin&authMechanism=DEFAULT');// je sais foutre pas pourquoi ni comment le authSource fonctionne 
+  await connect('mongodb://root:journeyroot@localhost:27017/voyage?authSource=admin&authMechanism=DEFAULT');// je sais foutre pas pourquoi ni comment le authSource fonctionne 
+
+  console.log('########################### Database connected ###########################');
+
+
   console.log('########################### connected to database ###########################');
+
+
+
   //await listDatabases();
 }
 
 connectDatabase().catch(err => console.log(err));
 
-
-//  async function listDatabases(client) {
-//   databasesList = await client.db().admin().listDatabases();
-
-//   console.log("Databases:");
-//   databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-// };
 
